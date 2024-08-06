@@ -1,0 +1,33 @@
+
+:root{
+    --base: #ffc600;
+    --spacing: 10px;
+    --bluring: 10px;
+}
+
+img{
+    padding: var(--spacing);
+    background: var(--base);
+    filter: blur(var(--bluring));
+}
+
+.hl{
+    color: var(--base);
+}
+
+body{
+    text-align: center;
+    background: #193549;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    color: aliceblue;
+}
+
+.controls{
+    margin-bottom: 50px;
+}
+
+input{
+    width: 100px;
+}
