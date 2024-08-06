@@ -33,4 +33,30 @@ const fifteenCenInv = inventors.filter(inventor => (inventor.year >= 1500 && inv
 console.table(fifteenCenInv);
 
 
+//--------------- Map Property ----------------
+
+const fullNames = inventors.map(inventor => (
+    `${inventor.first} ${inventor.last}`
+))
+
+// console.table(fullNames);
+console.log(fullNames);
+
+
+//--------------- Sort Property ----------------
+
+// const sortedOrder = inventors.sort(function(a,b){
+//     if(a.year>b.year) return 1;
+//     else return -1;
+// })
+
+const sortedOrder = inventors.sort((a, b) => a.year > b.year ? 1 : -1);
+
+// console.log(sortedOrder);
+console.table(sortedOrder);
+
+
+
+
+
 
