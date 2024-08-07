@@ -57,6 +57,33 @@ console.table(sortedOrder);
 
 
 
+//--------------- Reduce Property ----------------
+
+const totalYears = inventors.reduce((total, inventor)=>{
+    return total + (inventor.passed - inventor.year);
+}, 0);
+
+console.log(totalYears);
+
+
+//--------------- Different Sort Property ----------------
+// Sorting by age || years lived
+
+const oldestLived = inventors.sort((a,b)=>{
+    const firstOne = a.passed-a.year;
+    const nextOne = b.passed-b.year;
+    
+    return firstOne>nextOne ? -1 : 1;
+})
+
+// console.log(oldestLived);
+console.table(oldestLived);
+
+
+
+
+
+
 
 
 
