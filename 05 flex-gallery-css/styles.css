@@ -19,6 +19,7 @@ body {
 .panels {
     min-height: 100vh;
     overflow: hidden;
+    display: flex;
 }
 
 .panel {
@@ -28,10 +29,18 @@ body {
     text-align: center;
     align-items: center;
     transition:
-        font-size 0.7s cubic-bezier(0.65, -0.20, 0.65, -0.1) flex 0.7s cubic-bezier(0.65, -0.2, 0.65, -0.1) background 0.2s;
+        font-size 0.7s cubic-bezier(0.65, -0.20, 0.65, -0.1),
+        flex 0.7s cubic-bezier(0.65, -0.2, 0.65, -0.1),
+        background 0.2s;
     font-size: 20px;
     background-size: cover;
     background-position: center;
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .panel1 {
@@ -59,7 +68,19 @@ body {
     margin: 0;
     width: 100%;
     transition: transform 0.5s;
+
+
+    /* border: 1px solid coral; */
+    flex: 1 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.panel>*:first-child{transform: translateY(-100%);}
+.panel.on-active>*:first-child{transform: translateY(0);}
+.panel>*:last-child{transform: translateY(100%);}
+.panel.on-active>*:last-child{transform: translateY(0);}
 
 .panel p {
     text-transform: uppercase;
@@ -73,5 +94,11 @@ body {
 }
 
 .panel.open {
+    flex: 5;
     font-size: 40px;
+}
+
+.cta{
+    color: white;
+    text-decoration: none;
 }
